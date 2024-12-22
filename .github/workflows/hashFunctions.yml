@@ -8,3 +8,6 @@ jobs:
       - run: echo "${HASH}"
         env:
           HASH: ${{ hashFiles('.github/workflows/*.yml') }}
+      - run: echo "$ONE_FILE_HASH"
+        env:
+          ONE_FILE_HASH: ${{ hashFiles('.github/workflows/hello.yml') }}
