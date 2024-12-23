@@ -1,6 +1,7 @@
 name: Concurrency
 on: push
-concurrency: ${{ github.workflow }}
+concurrency:
+  group: ${{ github.workflow }}
 jobs:
   sleep:
     runs-on: ubuntu-latest
