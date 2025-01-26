@@ -9,3 +9,5 @@ jobs:
         id: error
       - run: echo "Catch error step"
         if: ${{ failure() && steps.error.outcome == 'failure' }}
+      - run: echo "Catch error steps"
+        if: ${{ failure() }}
